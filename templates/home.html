@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Home</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="static/css/add.css" type="text/css" media="screen" />
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/add">Add Books</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="content">
+        <div id="jumbotron-wrapper">
+            <div class="container">
+                <div class="jumbotron text-center">
+                    <h1>Welcome to the Library!</h1>
+                    <p>The Library allows you to search for books and create new book listings.</p>
+                    <form action="/search" method="POST">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-offset-4">
+                            <div class="input-group">
+                                    <input type="text" class="form-control" id="id_q" name="q" placeholder="Please enter your search" required/>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" id ="search" data-loading-text="Loading..." type="submit">Go!</button>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            <h1>Recent Books</h1>
+            <p>Click on a book to see more information.</p>
+        </div>
+        {% for it in books  %}
+
+            <div class="tile" href="#">
+                    <div class="content" data-toggle="modal" data-target="#myModal{{ it.isbn }}">
+                        <div class="pic" style="background-image:url('http://25.media.tumblr.com/tumblr_m9s6i9miss1rd6brco1_500.png')">
+                        </div>
+                    </div>
+                    <div class="title">{{it.title}}</div>
+            </div>
+
+<!-- Modal -->
+        <div class="modal fade" id="myModal{{ it.isbn }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="myModalLabel">{{ it.title }}</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Author:{{ it.author }}</p>
+
+                        {{ it.description }}
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
+        </div>
+
+    </div>
+</body>
+</html>
+
+

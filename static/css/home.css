@@ -1,0 +1,29 @@
+
+#jumbotron-wrapper {
+    margin-bottom: 50px;
+    padding: 50px 0px;
+}
+
+#jumbotron-wrapper .jumbotron h1, .jumbotron p, #movies h1, #jumbotron-wrapper .jumbotron h2, #jumbotron-wrapper .jumbotron p a, #theater-results h2, #contact h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+#jumbotron-wrapper .jumbotron h2 {
+    padding-bottom: 20px;
+}
+
+body .navbar {
+    margin-bottom: 0px;
+}
+
+#jumbotron-wrapper{
+    background-image:url('http://images.evangelismcoach.org/wp-content/uploads/StackOfBooks1.jpg');
+}
+
+body .jumbotron {
+    background-color: transparent;
+}
+
+

@@ -1,0 +1,163 @@
+body {
+
+  background-color: #C0C0CE;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+#jumbotron-wrapper {
+    margin-bottom: 50px;
+    padding: 50px 0px;
+}
+
+#jumbotron-wrapper .jumbotron h1, .jumbotron p, #movies h1, #jumbotron-wrapper .jumbotron h2, #jumbotron-wrapper .jumbotron p a, #theater-results h2, #contact h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+#jumbotron-wrapper .jumbotron h2 {
+    padding-bottom: 20px;
+}
+
+body .navbar {
+    margin-bottom: 0px;
+}
+
+#jumbotron-wrapper{
+    background-image:url('http://images.evangelismcoach.org/wp-content/uploads/StackOfBooks1.jpg');
+}
+
+body .jumbotron {
+    background-color: transparent;
+}
+
+
+.tile {
+    display: inline-block;
+    cursor: default;
+    border: 1px solid #BBBBBB;
+    font-size: 13px;
+    width: 150px;
+    height: 150px;
+    margin: 12px;
+    border-radius: 3px;
+}
+
+.tile:hover {
+    box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.4);
+    cursor:pointer;
+}
+
+.tile .content {
+    height:130px;
+    width:100%;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+}
+
+.tile .content .pic {
+    position:absolute;
+    height:130px;
+    width:150px;
+    opacity:0.8;
+    background-size: cover;
+    border-top-left-radius:2px;
+    border-top-right-radius:2px;
+    box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.3) inset;  /* Light shadow: */
+}
+
+.tile:hover .content .pic{
+    opacity: 1.0;
+}
+
+.tile .title {
+    height: 20px;
+    white-space: nowrap;
+    text-align: center;
+    padding:3px;
+    color: #444444;
+    overflow: hidden;
+    border-bottom-left-radius:3px;
+    border-bottom-right-radius:3px;
+    font-family: 'Open Sans', sans-serif;
+    text-overflow: ellipsis;
+}
+
+.tile:hover .title {
+    color: yellow;
+}
+
+a.tile, a.tile:hover { text-decoration: none; }
+
+
+/* Tile overrides */
+.tile {
+    width: 120px;
+    height: 200px;
+    margin: 12px;
+    margin-bottom:6px;
+    position:relative;
+}
+.tile:hover {
+    opacity: 1!important;
+}
+.tile .banner {
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+    padding: 8px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 50px;
+    font-size: 20px;
+    color: white;
+    font-family: verdana, San-Serif;
+}
+.tile .content .pic {
+    height:180px;
+    width:120px;
+    box-shadow: none;  /*Speeds things up a bit*/
+    opacity:0.85;
+}
+
+.tile, .tile .content, .tile .content .pic {
+    border-radius:2px;
+}
+
+.tile, .tile .title, .tile:hover {
+    background-color: transparent;
+    box-shadow: none;
+    border:0px;
+    /*color: white;*/
+}
+
+.tile .content {
+    height:180px;
+    border: 0px;
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.4);
+}
+
+.tile:hover .content {
+    box-shadow: 0px 5px 7px 4px rgba(0, 0, 0, 0.5);
+}
