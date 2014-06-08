@@ -57,7 +57,7 @@ def getUrl(request):
     if ('url' in request.POST) and request.POST['url'].strip():
         query_string = request.POST['url']
 
-    r = requests.get('https://api-ssl.bitly.com/v3/shorten?access_token=9a42cbf4c6c7c72121f0b1d64fa32502d5d1ab67&longUrl=' + query_string)
+    r = requests.get('https://api-ssl.bitly.com/v3/shorten?access_token=APIKEY&longUrl=' + query_string)
 
     j = r.json()
     urls = j['data']['url']
